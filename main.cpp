@@ -6,10 +6,6 @@
 #include <algorithm>
 
 using namespace std;
-
-// ───────────────────────────────────────────────
-// Base class - common properties for all characters
-// ───────────────────────────────────────────────
 class Character {
 protected:
     string name;
@@ -85,9 +81,6 @@ public:
     }
 };
 
-// ───────────────────────────────────────────────
-// Character classes
-// ───────────────────────────────────────────────
 class Warrior : public Character {
 public:
     Warrior(string n) : Character(n, 120) { gold = 20; }
@@ -106,9 +99,6 @@ public:
     string getType() const override { return "Mage"; }
 };
 
-// ───────────────────────────────────────────────
-// Enemy
-// ───────────────────────────────────────────────
 class Goblin {
 public:
     string name = "Goblin";
@@ -122,9 +112,6 @@ public:
     }
 };
 
-// ───────────────────────────────────────────────
-// Game class
-// ───────────────────────────────────────────────
 class Game {
 private:
     Character* player;
